@@ -1,0 +1,212 @@
+2019/08/16 10:13:49.699 [info ]  log server init complete,path=./log,level=debug
+2019/08/16 10:16:15.065 [info ]  log server init complete,path=./log,level=debug
+2019/08/16 10:17:15.133 [info ]  log server init complete,path=./log,level=debug
+2019/08/16 10:17:17.133 [info ]  welcome to domain check !any question can ask royalchen@royalchen.com
+2019/08/16 10:17:17.364 [info ]  
+====please input your cmd====
+2019/08/16 10:23:45.912 [debug]  input data is  ===========>
+2019/08/16 10:23:45.912 [debug]  you should input a cmd like this format (string json array):
+2019/08/16 10:23:45.912 [debug]  ["cmdstring","param1","param2"]
+2019/08/16 10:23:45.912 [debug]  ["StartCheckByDb"] will start check by db data
+2019/08/16 10:23:45.912 [debug]  ["StartGenDataAndCheck"] will start gen domainData and check by file data
+2019/08/16 10:23:45.912 [debug]  ["q"]:exit system
+2019/08/16 10:23:45.912 [info ]  
+====please input your cmd====
+2019/08/16 10:23:52.232 [debug]  input data is ["StartCheckByDb"] ===========>
+2019/08/16 10:23:52.232 [info ]  cmd run complete============
+
+
+2019/08/16 10:23:52.232 [info ]  
+====please input your cmd====
+2019/08/16 10:23:52.232 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=3,load data from db
+2019/08/16 10:23:52.232 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=4,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=1,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=1,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=3,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=1,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=3,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=2,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=4,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=2,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=2,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=5,load data from db
+2019/08/16 10:23:52.233 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=4,load data from db
+2019/08/16 10:23:52.234 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=5,load data from db
+2019/08/16 10:23:52.234 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=5,load data from db
+2019/08/16 10:23:52.270 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=3,need check size=0
+2019/08/16 10:23:52.312 [info ]  zone:com,name_length:3,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.430 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=4,need check size=0
+2019/08/16 10:23:52.432 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=3,need check size=0
+2019/08/16 10:23:52.432 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=2,need check size=0
+2019/08/16 10:23:52.436 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=4,need check size=0
+2019/08/16 10:23:52.436 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=2,need check size=0
+2019/08/16 10:23:52.436 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=2,need check size=0
+2019/08/16 10:23:52.436 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=5,need check size=0
+2019/08/16 10:23:52.436 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=5,need check size=0
+2019/08/16 10:23:52.436 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=5,need check size=0
+2019/08/16 10:23:52.436 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=1,need check size=0
+2019/08/16 10:23:52.436 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=1,need check size=0
+2019/08/16 10:23:52.436 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=3,need check size=0
+2019/08/16 10:23:52.439 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=1,need check size=0
+2019/08/16 10:23:52.440 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=4,need check size=0
+2019/08/16 10:23:52.475 [info ]  zone:cn,name_length:3,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.475 [info ]  zone:com,name_length:4,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.476 [info ]  zone:cn,name_length:2,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.479 [info ]  zone:net,name_length:4,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.480 [info ]  zone:com,name_length:2,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.481 [info ]  zone:com,name_length:5,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.482 [info ]  zone:cn,name_length:5,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.482 [info ]  zone:net,name_length:2,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.482 [info ]  zone:net,name_length:5,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.482 [info ]  zone:net,name_length:3,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.484 [info ]  zone:com,name_length:1,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.485 [info ]  zone:cn,name_length:4,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.633 [info ]  zone:cn,name_length:1,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:23:52.635 [info ]  zone:net,name_length:1,next will be run in 2019-08-16 10:24:52
+2019/08/16 10:24:13.088 [debug]  input data is  ===========>
+2019/08/16 10:24:13.088 [debug]  you should input a cmd like this format (string json array):
+2019/08/16 10:24:13.088 [debug]  ["cmdstring","param1","param2"]
+2019/08/16 10:24:13.088 [debug]  ["StartCheckByDb"] will start check by db data
+2019/08/16 10:24:13.088 [debug]  ["StartGenDataAndCheck"] will start gen domainData and check by file data
+2019/08/16 10:24:13.088 [debug]  ["q"]:exit system
+2019/08/16 10:24:13.088 [info ]  
+====please input your cmd====
+2019/08/16 10:24:14.279 [debug]  input data is  ===========>
+2019/08/16 10:24:14.279 [debug]  you should input a cmd like this format (string json array):
+2019/08/16 10:24:14.279 [debug]  ["cmdstring","param1","param2"]
+2019/08/16 10:24:32.835 [info ]  log server init complete,path=./log,level=debug
+2019/08/16 10:24:34.836 [info ]  welcome to domain check !any question can ask royalchen@royalchen.com
+2019/08/16 10:24:34.916 [info ]  
+====please input your cmd====
+2019/08/16 10:24:35.511 [debug]  input data is  ===========>
+2019/08/16 10:24:35.511 [debug]  you should input a cmd like this format (string json array):
+2019/08/16 10:24:35.511 [debug]  ["cmdstring","param1","param2"]
+2019/08/16 10:24:35.511 [debug]  ["StartCheckByDb"] will start check by db data
+2019/08/16 10:24:35.511 [debug]  ["StartGenDataAndCheck"] will start gen domainData and check by file data
+2019/08/16 10:24:35.511 [debug]  ["q"]:exit system
+2019/08/16 10:24:35.511 [info ]  
+====please input your cmd====
+2019/08/16 10:24:39.673 [debug]  input data is ["StartCheckByDb"] ===========>
+2019/08/16 10:24:39.673 [info ]  cmd run complete============
+
+
+2019/08/16 10:24:39.673 [info ]  
+====please input your cmd====
+2019/08/16 10:24:39.673 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=1,load data from db
+2019/08/16 10:24:39.674 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=3,load data from db
+2019/08/16 10:24:39.674 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=2,load data from db
+2019/08/16 10:24:39.674 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=2,load data from db
+2019/08/16 10:24:39.674 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=2,load data from db
+2019/08/16 10:24:39.674 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=3,load data from db
+2019/08/16 10:24:39.674 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=1,load data from db
+2019/08/16 10:24:39.674 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=1,load data from db
+2019/08/16 10:24:39.674 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=4,load data from db
+2019/08/16 10:24:39.675 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=3,load data from db
+2019/08/16 10:24:39.675 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=4,load data from db
+2019/08/16 10:24:39.675 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=5,load data from db
+2019/08/16 10:24:39.675 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=4,load data from db
+2019/08/16 10:24:39.675 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=5,load data from db
+2019/08/16 10:24:39.675 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=5,load data from db
+2019/08/16 10:24:50.989 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=1,need check size=0
+2019/08/16 10:24:51.035 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=2,need check size=2
+2019/08/16 10:24:51.065 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=2,need check size=1
+2019/08/16 10:24:51.104 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=1,need check size=0
+2019/08/16 10:24:51.187 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=3,need check size=7
+2019/08/16 10:24:51.225 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=2,need check size=0
+2019/08/16 10:24:51.283 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=1,need check size=0
+2019/08/16 10:24:51.284 [info ]  domain:sf.com,wait for get domainInfo
+2019/08/16 10:24:51.284 [info ]  domain:jv.net,wait for get domainInfo
+2019/08/16 10:24:51.311 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=5,need check size=18
+2019/08/16 10:24:51.345 [info ]  ================start CheckDomainExpireDt,zone=net,name_length=3,need check size=202
+2019/08/16 10:24:51.358 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=3,need check size=31
+2019/08/16 10:24:51.365 [info ]  domain:2b6.com,wait for get domainInfo
+2019/08/16 10:24:51.452 [info ]  domain:sf.com,read respond success
+2019/08/16 10:24:51.458 [info ]  domain:jv.net,read respond success
+2019/08/16 10:24:51.483 [info ]  domain:0f6.cn,wait for get domainInfo
+2019/08/16 10:24:51.491 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=5,need check size=1124
+2019/08/16 10:24:51.494 [info ]  domain:01278.com,wait for get domainInfo
+2019/08/16 10:24:51.527 [info ]  domain:0cl.net,wait for get domainInfo
+2019/08/16 10:24:51.543 [info ]  domain:2b6.com,read respond success
+2019/08/16 10:24:51.564 [info ]  domain:0f6.cn,read respond success
+2019/08/16 10:24:51.565 [info ]  domain:13777.cn,wait for get domainInfo
+2019/08/16 10:24:51.630 [error]  13777.cn connection readAll error,read tcp 10.20.201.244:50893->218.241.97.14:43: wsarecv: An existing connection was forcibly closed by the remote host.
+2019/08/16 10:24:51.675 [info ]  domain:01278.com,read respond success
+2019/08/16 10:24:51.722 [info ]  domain:0cl.net,read respond success
+2019/08/16 10:24:51.834 [info ]  domain:k4.net,wait for get domainInfo
+2019/08/16 10:24:51.911 [info ]  domain:30046.cn,wait for get domainInfo
+2019/08/16 10:24:51.919 [info ]  domain:3j9.com,wait for get domainInfo
+2019/08/16 10:24:51.991 [info ]  domain:159.cn,wait for get domainInfo
+2019/08/16 10:24:52.103 [info ]  domain:0d3.net,wait for get domainInfo
+2019/08/16 10:24:52.362 [error]  159.cn connection readAll error,read tcp 10.20.201.244:50898->218.241.97.14:43: wsarecv: An existing connection was forcibly closed by the remote host.
+2019/08/16 10:24:52.530 [info ]  domain:30046.cn,read respond success
+2019/08/16 10:24:52.546 [info ]  ================start CheckDomainExpireDt,zone=com,name_length=4,need check size=226
+2019/08/16 10:24:52.637 [info ]  domain:2iz.cn,wait for get domainInfo
+2019/08/16 10:24:52.712 [info ]  domain:2iz.cn,read respond success
+2019/08/16 10:24:52.716 [info ]  domain:abfh.com,wait for get domainInfo
+2019/08/16 10:24:52.872 [info ]  ================start CheckDomainExpireDt,zone=cn,name_length=4,need check size=97
+2019/08/16 10:24:52.941 [info ]  domain:2125.cn,wait for get domainInfo
+2019/08/16 10:24:52.973 [info ]  domain:2rz.cn,wait for get domainInfo
+2019/08/16 10:24:52.998 [info ]  domain:2125.cn,read respond success
+2019/08/16 10:24:53.022 [info ]  domain:k4.net,read respond success
+2019/08/16 10:24:53.112 [info ]  domain:3j9.com,read respond success
+2019/08/16 10:24:53.146 [error]  2rz.cn connection readAll error,read tcp 10.20.201.244:50904->218.241.97.14:43: wsarecv: An existing connection was forcibly closed by the remote host.
+2019/08/16 10:24:53.262 [info ]  domain:acjp.cn,wait for get domainInfo
+2019/08/16 10:24:53.286 [info ]  domain:0d3.net,read respond success
+2019/08/16 10:24:53.326 [info ]  domain:acjp.cn,read respond success
+2019/08/16 10:24:53.418 [info ]  domain:2ub.cn,wait for get domainInfo
+2019/08/16 10:24:53.491 [info ]  domain:2ub.cn,read respond success
+2019/08/16 10:24:53.492 [info ]  domain:cpe.com,wait for get domainInfo
+2019/08/16 10:24:53.599 [info ]  domain:aljx.cn,wait for get domainInfo
+2019/08/16 10:24:53.669 [info ]  domain:0f3.net,wait for get domainInfo
+2019/08/16 10:24:53.754 [info ]  domain:42r.cn,wait for get domainInfo
+2019/08/16 10:24:53.831 [info ]  domain:42r.cn,read respond success
+2019/08/16 10:24:54.074 [info ]  domain:aljx.cn,read respond success
+2019/08/16 10:24:54.338 [info ]  domain:aoko.cn,wait for get domainInfo
+2019/08/16 10:24:54.395 [info ]  domain:aoko.cn,read respond success
+2019/08/16 10:24:54.399 [info ]  domain:05235.com,wait for get domainInfo
+2019/08/16 10:24:54.428 [info ]  domain:05235.com,read respond success
+2019/08/16 10:24:54.580 [info ]  zone:cn,name_length:1,next will be run in 2019-08-23 18:25:54
+2019/08/16 10:24:54.597 [info ]  zone:cn,name_length:2,next will be run in 2019-08-17 15:41:11
+2019/08/16 10:24:54.645 [info ]  zone:com,name_length:1,next will be run in 2019-12-09 00:38:11
+2019/08/16 10:24:54.649 [info ]  zone:net,name_length:1,next will be run in 2019-12-09 00:39:20
+2019/08/16 10:24:54.654 [info ]  domain:bczu.cn,wait for get domainInfo
+2019/08/16 10:24:54.708 [info ]  domain:bczu.cn,read respond success
+2019/08/16 10:24:54.800 [info ]  domain:06466.com,wait for get domainInfo
+2019/08/16 10:24:54.855 [info ]  domain:0f3.net,read respond success
+2019/08/16 10:24:54.975 [info ]  domain:bnjx.cn,wait for get domainInfo
+2019/08/16 10:24:55.045 [info ]  domain:bnjx.cn,read respond success
+2019/08/16 10:24:55.238 [info ]  domain:0f5.net,wait for get domainInfo
+2019/08/16 10:24:55.254 [info ]  domain:abfh.com,read respond success
+2019/08/16 10:24:55.303 [info ]  domain:bucp.cn,wait for get domainInfo
+2019/08/16 10:24:55.371 [error]  bucp.cn connection readAll error,read tcp 10.20.201.244:50918->218.241.97.14:43: wsarecv: An existing connection was forcibly closed by the remote host.
+2019/08/16 10:24:55.646 [info ]  domain:aftn.com,wait for get domainInfo
+2019/08/16 10:24:55.654 [info ]  domain:cbwu.cn,wait for get domainInfo
+2019/08/16 10:24:55.735 [info ]  domain:cbwu.cn,read respond success
+2019/08/16 10:24:55.848 [info ]  domain:aftn.com,read respond success
+2019/08/16 10:24:55.917 [info ]  domain:30492.cn,wait for get domainInfo
+2019/08/16 10:24:55.985 [error]  30492.cn connection readAll error,read tcp 10.20.201.244:50902->218.241.97.14:43: wsarecv: An existing connection was forcibly closed by the remote host.
+2019/08/16 10:24:56.001 [info ]  domain:ccla.cn,wait for get domainInfo
+2019/08/16 10:24:56.169 [error]  ccla.cn connection readAll error,read tcp 10.20.201.244:50921->218.241.97.14:43: wsarecv: An existing connection was forcibly closed by the remote host.
+2019/08/16 10:24:56.225 [info ]  domain:aiaf.com,wait for get domainInfo
+2019/08/16 10:24:56.253 [info ]  domain:30643.cn,wait for get domainInfo
+2019/08/16 10:24:56.321 [info ]  domain:30643.cn,read respond success
+2019/08/16 10:24:56.438 [info ]  domain:cdok.cn,wait for get domainInfo
+2019/08/16 10:24:56.503 [info ]  domain:cdok.cn,read respond success
+2019/08/16 10:24:56.667 [info ]  domain:30754.cn,wait for get domainInfo
+2019/08/16 10:24:56.683 [info ]  domain:cpe.com,read respond success
+2019/08/16 10:24:56.736 [info ]  domain:30754.cn,read respond success
+2019/08/16 10:24:56.764 [info ]  domain:cnix.cn,wait for get domainInfo
+2019/08/16 10:24:56.992 [debug]  input data is  ===========>
+2019/08/16 10:24:56.992 [debug]  you should input a cmd like this format (string json array):
+2019/08/16 10:29:59.796 [info ]  log server init complete,path=./log,level=debug
+2019/08/16 10:30:01.796 [info ]  welcome to domain check !any question can ask royalchen@royalchen.com
+2019/08/16 10:30:01.997 [info ]  
+====please input your cmd====
+2019/08/16 10:30:03.872 [debug]  input data is  ===========>
+2019/08/16 10:30:03.872 [debug]  you should input a cmd like this format (string json array):
+2019/08/16 10:32:49.136 [info ]  log server init complete,path=./log,level=debug
+2019/08/16 10:32:51.136 [info ]  welcome to domain check !any question can ask royalchen@royalchen.com
+2019/08/16 10:32:51.179 [info ]  
+====please input your cmd====
+2019/08/16 10:34:51.975 [debug]  input data is  ===========>
+2019/08/16 10:34:51.975 [debug]  you should input a cmd like this format (string json array):
