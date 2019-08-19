@@ -1,8 +1,9 @@
 package domainCheckGenTxt
 
 import (
-	"log"
 	"os"
+
+	"github.com/coderguang/GameEngine_go/sgthread"
 
 	"github.com/coderguang/GameEngine_go/sgfile"
 
@@ -20,10 +21,16 @@ var numlist []string
 var charlist []string
 
 func CreateDominFile(fileName string) {
-	sgfile.AutoMkDir(fileName)
+	path, err := sgfile.GetPath(fileName)
+	if err != nil {
+		sglog.Error("get path error,err=%s", err)
+		sgthread.DelayExit(2)
+	}
+	sgfile.AutoMkDir(path)
 	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE, 0766)
 	if err != nil {
-		log.Fatal(err)
+		sglog.Error("open file error,err=%s", err)
+		sgthread.DelayExit(2)
 	}
 	allList := []string{}
 	allList = append(allList, numlist...)
