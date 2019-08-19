@@ -60,6 +60,86 @@ go run main.go config/config.json
    you can also get domain info in you database,like below:
    ![domain](https://github.com/coderguang/img/blob/master/domainCheck_go/domain.png)
    
+   status means:
+   ```go
+   const SG_WHOIS_STATUS_CHECK_FAILD int = -1   //receive domain server failed,will recheck in next time
+   const SG_WHOIS_STATUS_CAN_REGIST_NOW int = 0  //can registed now
+   const SG_WHOIS_STATUS_HAD_REGIST int = 1 //had been registed
+   const SG_WHOIS_STATUS_LIMIT_BY_GOVERNMENT int = 2 //govenment forbidden,if you search cn ,you will get this
+   ```
+   
+### 7. others
+#### 1. now only will gen com、cn、net and pure num domains,if you want to change it ,you should modify code in src/genTxt/genTxt.go 
+```go
+unc CreateDominFile(fileName string) {
+	path, err := sgfile.GetPath(fileName)
+	if err != nil {
+		sglog.Error("get path error,err=%s", err)
+		sgthread.DelayExit(2)
+	}
+	sgfile.AutoMkDir(path)
+	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE, 0766)
+	if err != nil {
+		sglog.Error("open file error,err=%s", err)
+		sgthread.DelayExit(2)
+	}
+	allList := []string{}
+	allList = append(allList, numlist...)
+	allList = append(allList, charlist...)
+	//create all
+	sum := 0
+	tmpSum := createDomainFileAndWrite(allList, 1, file)
+	sum += tmpSum
+	tmpSum = createDomainFileAndWrite(allList, 2, file)
+	sum += tmpSum
+	tmpSum = createDomainFileAndWrite(allList, 3, file)
+	sum += tmpSum
+	//create only num
+	tmpSum = createDomainFileAndWrite(numlist, 4, file)
+	sum += tmpSum
+	tmpSum = createDomainFileAndWrite(numlist, 5, file)
+	sum += tmpSum
+
+	//create only char
+	tmpSum = createDomainFileAndWrite(charlist, 4, file)
+	sum += tmpSum
+
+	defer file.Close()
+	sglog.Info("sum is %d", sum)
+}
+
+func createDomainFileAndWrite(srcList []string, num int, file *os.File) (sum int) {
+	sglog.Info("now gen %s,num=%d", srcList, num)
+	sum = 0
+	result := []string{}
+	sgalgorithm.GenPermutation(srcList, num, &result)
+	zonelist := []string{"com", "cn", "net"} //modify domain
+	for _, n := range result {
+		for _, k := range zonelist {
+			str := n + "." + k + "\n"
+			file.Write([]byte(str))
+			sum++
+		}
+	}
+	sglog.Info("gen success total num=%d", sum)
+	return
+}
+```
+#### 2. if you want to change high value domain rule ,you should modify code in src/sacnner/scanner.go
+```go
+func HightValueNotice(result *sgwhois.Whois) {
+	if sgwhois.IsHightValueDomainByName(result.Domain) {
+		time_now := sgtime.New()
+		if sgwhois.SG_WHOIS_STATUS_CAN_REGIST_NOW == result.IsRegist {
+			domainCheckMail.SendMailNotice(result.Domain, "  can regist now")
+			sglog.Info("luck domain ", result.Domain, " can regist now")
+		} else if sgwhois.SG_WHOIS_STATUS_LIMIT_BY_GOVERNMENT != result.IsRegist && result.ExpiryDt.Before(time_now) {
+			//SendMailNotice( domain, config, "  can regist "+result.ExpiryDtStr)
+			sglog.Info("luck domain %s can regist at %s", result.Domain, result.ExpiryDtStr)
+		}
+	}
+}
+```
 
 ## About me
 
