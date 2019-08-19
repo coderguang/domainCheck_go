@@ -6,3 +6,4 @@
 [![](https://img.shields.io/badge/wp-@royalchen-blue.svg)](https://www.royalchen.com)
 
 auto check domain regist status and expiry time,notice by mail when a high value domain can be registed!
+ 
