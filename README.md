@@ -7,7 +7,15 @@
 
 
 ## what it can do
-* auto check domain regist status
-* auto update domain expiry time
-* notice by email when a high value can be registed
+* auto check domain **regist status**
+* auto update domain **expiry time**
+* **notice by email** when a high value can be registed
+
+## require
+require | version
+------ | ------
+go | 1.11
+GameEngine_go | [v1.0.0](https://github.com/coderguang/GameEngine_go/releases/tag/v1.0.0)
+go-sql-driver/mysql | [v1.4.1 ](github.com/go-sql-driver/mysql)
+
 
