@@ -47,6 +47,36 @@ func InsertOrUpdateData(result *sgwhois.Whois) {
 	}
 }
 
+func transFiledToStruct(fieldName string, fieldValue string, result *sgwhois.Whois) {
+	switch fieldName {
+	case "name":
+		result.Name = fieldValue
+	case "zone":
+		result.Zone = fieldValue
+	case "name_length":
+		result.Name_length, _ = strconv.Atoi(fieldValue)
+	case "status":
+		result.IsRegist, _ = strconv.Atoi(fieldValue)
+	case "create_dt_str":
+		result.CreateDtStr = fieldValue
+	case "update_dt_str":
+		result.UpdateDtStr = fieldValue
+	case "expiry_dt_str":
+		result.ExpiryDtStr = fieldValue
+	case "create_dt":
+		result.CreateDt = sgtime.New()
+		result.CreateDt.Parse(fieldValue, sgtime.FORMAT_TIME_NORMAL)
+	case "update_dt":
+		result.UpdateDt = sgtime.New()
+		result.UpdateDt.Parse(fieldValue, sgtime.FORMAT_TIME_NORMAL)
+	case "expiry_dt":
+		result.ExpiryDt = sgtime.New()
+		result.ExpiryDt.Parse(fieldValue, sgtime.FORMAT_TIME_NORMAL)
+	default:
+		sglog.Error("unkonw column:%s,value:%s", fieldName, fieldValue)
+	}
+}
+
 func transfromDataToStruct(rows *sql.Rows) *sgwhois.Whois {
 	result := new(sgwhois.Whois)
 	columns, _ := rows.Columns()
@@ -60,32 +90,7 @@ func transfromDataToStruct(rows *sql.Rows) *sgwhois.Whois {
 		fieldName := columns[i]
 		fieldValue := string(col.([]byte))
 		if col != nil {
-			if "name" == fieldName {
-				result.Name = fieldValue
-			} else if "zone" == fieldName {
-				result.Zone = fieldValue
-			} else if "name_length" == fieldName {
-				result.Name_length, _ = strconv.Atoi(fieldValue)
-			} else if "status" == fieldName {
-				result.IsRegist, _ = strconv.Atoi(fieldValue)
-			} else if "create_dt_str" == fieldName {
-				result.CreateDtStr = fieldValue
-			} else if "update_dt_str" == fieldName {
-				result.UpdateDtStr = fieldValue
-			} else if "expiry_dt_str" == fieldName {
-				result.ExpiryDtStr = fieldValue
-			} else if "create_dt" == fieldName {
-				result.CreateDt = sgtime.New()
-				result.CreateDt.Parse(fieldValue, sgtime.FORMAT_TIME_NORMAL)
-			} else if "update_dt" == fieldName {
-				result.UpdateDt = sgtime.New()
-				result.UpdateDt.Parse(fieldValue, sgtime.FORMAT_TIME_NORMAL)
-			} else if "expiry_dt" == fieldName {
-				result.ExpiryDt = sgtime.New()
-				result.ExpiryDt.Parse(fieldValue, sgtime.FORMAT_TIME_NORMAL)
-			} else {
-				sglog.Error("unkonw column:%s,value:%s", fieldName, fieldValue)
-			}
+			transFiledToStruct(fieldName, fieldValue, result)
 		}
 	}
 	result.Domain = result.Name + "." + result.Zone
