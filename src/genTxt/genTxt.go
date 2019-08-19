@@ -62,7 +62,7 @@ func createDomainFileAndWrite(srcList []string, num int, file *os.File) (sum int
 	sum = 0
 	result := []string{}
 	sgalgorithm.GenPermutation(srcList, num, &result)
-	zonelist := []string{"com", "cn", "net"} //修改这里,决定生成不同后缀的域名
+	zonelist := []string{"com", "cn", "net"} //modify domain
 	for _, n := range result {
 		for _, k := range zonelist {
 			str := n + "." + k + "\n"
