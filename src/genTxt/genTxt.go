@@ -4,6 +4,8 @@ import (
 	"log"
 	"os"
 
+	"github.com/coderguang/GameEngine_go/sgfile"
+
 	"github.com/coderguang/GameEngine_go/sgalgorithm"
 	"github.com/coderguang/GameEngine_go/sglog"
 )
@@ -18,6 +20,7 @@ var numlist []string
 var charlist []string
 
 func CreateDominFile(fileName string) {
+	sgfile.AutoMkDir(fileName)
 	file, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE, 0766)
 	if err != nil {
 		log.Fatal(err)
