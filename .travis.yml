@@ -4,5 +4,4 @@ go:
   - 1.11.2
 
 script:
-  - cd coderguang/domainCheck_go
   - go build
