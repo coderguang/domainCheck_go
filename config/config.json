@@ -1,13 +1,13 @@
 {
-    "Dburl":"localhost",  //数据库地址
-    "Dbport":"3306",  //数据库端口
-    "Dbuser":"test", //数据库用户名
-    "Dbpwd":"test", //数据库密码
-    "Dbname":"domain", //数据库名
-    "DoroutinesNum":5, //协程数量(仅在一开始时从文件查找域名检测时才有效)
-    "EmailFrom":"",  //发邮件账号
-    "EmailPwd":"", //发邮件账号密码
-    "EmailTo":"royalchen@royalchen.com", //收邮件账号
-    "Smtp":"smtps://smtp.exmail.qq.com", //smtp地址
-    "SmtpPort":"465"  //smtp端口
+    "Dburl":"localhost",  
+    "Dbport":"3306", 
+    "Dbuser":"test", 
+    "Dbpwd":"test", 
+    "Dbname":"domain",
+    "DoroutinesNum":5, 
+    "EmailFrom":"", 
+    "EmailPwd":"", 
+    "EmailTo":"royalchen@royalchen.com", 
+    "Smtp":"smtps://smtp.exmail.qq.com", 
+    "SmtpPort":"465" 
 }
