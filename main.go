@@ -43,7 +43,7 @@ func main() {
 	sgserver.StartLogServer("debug", "./log", log.LstdFlags, true)
 
 	arg_num := len(os.Args) - 1
-	if arg_num<1{
+	if arg_num < 1 {
 		sglog.Error("please input config file ")
 		return
 	}
