@@ -16,7 +16,7 @@ domainCheck_go
 require | version
 ------ | ------
 go | 1.11
-GameEngine_go | [v1.0.0](https://github.com/coderguang/GameEngine_go)
+[GameEngine_go](https://github.com/coderguang/GameEngine_go) | [v1.0.0](https://github.com/coderguang/GameEngine_go)
 go-sql-driver/mysql | [v1.4.1 ](https://github.com/go-sql-driver/mysql)
 
 
