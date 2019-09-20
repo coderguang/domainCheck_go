@@ -33,7 +33,7 @@ func GetDbConnectionInfo() (string, string, string, string, string) {
 }
 
 func GetMailConnectionInfo() (string, string, string, string, string) {
-	return "", globalCfg.EmailFrom, globalCfg.EmailPwd, globalCfg.EmailTo, globalCfg.Smtp
+	return globalCfg.EmailFrom, globalCfg.EmailPwd, globalCfg.EmailTo, globalCfg.Smtp, globalCfg.SmtpPort
 }
 
 func GetCoroutineNum() int {

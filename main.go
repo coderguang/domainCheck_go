@@ -33,9 +33,14 @@ func StartGenDataAndCheck(cmd []string) {
 	StartCheckByDb(cmd)
 }
 
+func TestMail(cmd []string) {
+	domainCheckMail.SendMailNotice("just test", "can it?")
+}
+
 func registCmd() {
 	sgcmd.RegistCmd("StartCheckByDb", "[\"StartCheckByDb\"] will start check by db data", StartCheckByDb)
 	sgcmd.RegistCmd("StartGenDataAndCheck", "[\"StartGenDataAndCheck\"] will start gen domainData and check by file data", StartGenDataAndCheck)
+	sgcmd.RegistCmd("TestMail", "[\"TestMail\"] TestMail", TestMail)
 }
 
 func main() {

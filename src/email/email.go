@@ -37,6 +37,6 @@ func SendMailNotice(domain string, exMsg string) {
 	to := []string{mailTo}
 	err := sgmail.SendMail(smtpUrl+":"+stmpPort, globalMailAuth, to, "Domain check Notice:"+domain+"  "+exMsg, "static server", mailFrom, "luck check a unregiest domain:"+domain)
 	if err != nil {
-		sglog.Error("sg_email.SendMail error,domain=%s,error=%e", domain, err)
+		sglog.Error("sg_email.SendMail error,domain=%s,error=%s", domain, err)
 	}
 }
