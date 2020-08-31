@@ -28,6 +28,7 @@ var (
 
 func init() {
 	globalDomainInfo = new(SecureDomainMap)
+	globalDomainInfo.Data = make(map[string]*sgtime.DateTime)
 }
 
 func ScanDomainByFile(filename string) {
