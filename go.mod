@@ -6,3 +6,5 @@ require (
 )
 
 //replace github.com/coderguang/GameEngine_go => ../github.com/coderguang/GameEngine_go
+
+go 1.13

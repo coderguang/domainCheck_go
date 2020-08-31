@@ -7,6 +7,7 @@ import (
 	domainCheckMail "domainCheck/src/email"
 	"io"
 	"os"
+	"sync"
 
 	"github.com/coderguang/GameEngine_go/sgthread"
 	"github.com/coderguang/GameEngine_go/sgtime"
@@ -15,6 +16,19 @@ import (
 
 	"github.com/coderguang/GameEngine_go/sglog"
 )
+
+type SecureDomainMap struct {
+	Data map[string]*sgtime.DateTime
+	Lock sync.RWMutex
+}
+
+var (
+	globalDomainInfo *SecureDomainMap
+)
+
+func init() {
+	globalDomainInfo = new(SecureDomainMap)
+}
 
 func ScanDomainByFile(filename string) {
 
@@ -166,8 +180,25 @@ func HightValueNotice(result *sgwhois.Whois) {
 	if sgwhois.IsHightValueDomainByName(result.Domain) {
 		time_now := sgtime.New()
 		if sgwhois.SG_WHOIS_STATUS_CAN_REGIST_NOW == result.IsRegist {
-			domainCheckMail.SendMailNotice(result.Domain, "  can regist now")
 			sglog.Info("luck domain ", result.Domain, " can regist now")
+
+			globalDomainInfo.Lock.Lock()
+			defer globalDomainInfo.Lock.Unlock()
+			shouleNotice := false
+
+			if data, ok := globalDomainInfo.Data[result.Domain]; ok {
+				if time_now.GetTotalSecond()-data.GetTotalSecond() > int64(60*60*24*7) {
+					globalDomainInfo.Data[result.Domain] = time_now
+					shouleNotice = true
+				}
+			} else {
+				shouleNotice = true
+				globalDomainInfo.Data[result.Domain] = time_now
+			}
+
+			if shouleNotice {
+				domainCheckMail.SendMailNotice(result.Domain, "  can regist now")
+			}
 		} else if sgwhois.SG_WHOIS_STATUS_LIMIT_BY_GOVERNMENT != result.IsRegist && result.ExpiryDt.Before(time_now) {
 			//SendMailNotice( domain, config, "  can regist "+result.ExpiryDtStr)
 			sglog.Info("luck domain %s can regist at %s", result.Domain, result.ExpiryDtStr)
